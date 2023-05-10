@@ -3,8 +3,7 @@ extends KinematicBody2D
 var gravity = Vector2(0,9.82)
 var velocity = Vector2.ZERO
 var terminal_v = 1.8
-
-export var wind = Vector2.ZERO
+var wind = Vector2.ZERO
 
 func _physics_process(_delta):
 	if velocity.y > terminal_v:

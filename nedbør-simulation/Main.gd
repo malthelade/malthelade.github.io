@@ -1,6 +1,6 @@
 extends Node2D
 
-var regn_scene = preload("res://Regn.tscn") #preloader packed scene så den inden den bliver vist så det ikke lagger
+var regn_scene = preload("res://Regn.tscn")
 var sne_scene = preload("res://Sne.tscn")
 
 var raining = false
@@ -9,10 +9,10 @@ var wind = Vector2.ZERO
 
 func _process(_delta):
 	if raining == true:
-		var regn = regn_scene.instance() #får den preloadede scene til at eksistere men ikke til at blive vist
-		regn.set_pos(Vector2(rand_range(0,get_viewport().size.x),-10)) #sætter positionen af regnen så den ved hvor den skal spawne, langs x da y altid skal være 0
+		var regn = regn_scene.instance()
+		regn.set_pos(Vector2(rand_range(0,get_viewport().size.x),-10))
 		regn.set_wind(wind)
-		add_child(regn) #tilføjer regnen som et barn af main
+		add_child(regn)
 	
 	if snowing == true:
 		var sne = sne_scene.instance()
