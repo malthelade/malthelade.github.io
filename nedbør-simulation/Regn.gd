@@ -6,7 +6,7 @@ var terminal_v = 10
 var wind = Vector2.ZERO
 
 func _physics_process(_delta):
-	if velocity.y > terminal_v:
+	if velocity.y >= terminal_v:
 		velocity.y = terminal_v
 	else:
 		velocity += gravity

@@ -10,13 +10,13 @@ var wind = Vector2.ZERO
 func _process(_delta):
 	if raining == true:
 		var regn = regn_scene.instance()
-		regn.set_pos(Vector2(rand_range(0,get_viewport().size.x),-10))
+		regn.set_pos(Vector2(rand_range(0,get_viewport().size.x),-30))
 		regn.set_wind(wind)
 		add_child(regn)
 	
 	if snowing == true:
 		var sne = sne_scene.instance()
-		sne.set_pos(Vector2(rand_range(0,get_viewport().size.x),-10))
+		sne.set_pos(Vector2(rand_range(0,get_viewport().size.x),-30))
 		sne.set_wind(wind)
 		add_child(sne)
 
