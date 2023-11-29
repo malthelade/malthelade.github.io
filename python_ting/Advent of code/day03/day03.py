@@ -16,9 +16,18 @@ def solutionA(lines):
         
 
 def solutionB(lines):
-  for index, line in enumerate(lines[::3]):
-    print(index)
-    print(line)
+  badges = []
+  sum = 0
+  prio = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  for line in lines[::3]:
+    for char in line:
+      if char in lines[lines.index(line)+1] and char in lines[lines.index(line)+2]:
+        badges.append(char)
+        break
+  for badge in badges:
+    sum += prio.index(badge) + 1
+  print(badges)
+  return sum
   
 
 
